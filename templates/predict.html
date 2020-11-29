@@ -1,0 +1,82 @@
+{% extends 'index.html' %} {% block content %}
+<center>
+
+    <form method="POST" action="http://localhost:5000/pred_result">
+        <br>
+        <p><b>Employee Attrition Prediction</b></p>
+        <br>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">EnvironmentSatisfaction (range 1-4):</label>
+                <input type="number" name="EnvironmentSatisfaction" step="1" min="1" max="4" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">JobSatisfaction (range 1-4):</label>
+                <input type="number" name="JobSatisfaction" step="1" min="1" max="4" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">Age:</label>
+                <input type="number" name="Age" step="1" min="1" max="70" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <br>
+        <!-- <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 250px">BusinessTravel:</span>
+            <select name="day" style="width: 250px" class="form-control" required="required">
+            <option value="0">Non-Travel</option>
+            <option value="1">Travel_Rarely</option>
+            <option value="2">Travel_Frequently</option>
+            <option disabled selected hidden></option>
+            </select>
+            </div>
+        <br> -->
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">BusinessTravel (range 0-2):</label>
+                <input type="number" name="BusinessTravel" step="1" min="0" max="2" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">MonthlyIncome:</label>
+                <input type="number" name="MonthlyIncome" step="1" min="1" max="100000" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">TotalWorkingYears:</label>
+                <input type="number" name="TotalWorkingYears" step="1" min="1" max="100" style="width: 250px" id="Age" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">YearsAtCompany:</label>
+                <input type="number" name="YearsAtCompany" step="0.01" min="1" max="1000" style="width: 250px" id="bill" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">YearsWithCurrManager:</label>
+                <input type="number" name="YearsWithCurrManager" step="0.01" min="1" max="1000" style="width: 250px" id="bill" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="bill">WorkingHours:</label>
+                <input type="number" name="WorkingHours" step="0.01" min="1" max="1000" style="width: 250px" id="bill" class="form-control" required=True/>
+            </div>
+        </div>
+        <br>
+        <button type="submit" style="background-color: rgb(4,122,133); color: whitesmoke" class="btn btn-info">Predict</button>
+    </form>
+    <br>
+</center>
+
+{% endblock %}

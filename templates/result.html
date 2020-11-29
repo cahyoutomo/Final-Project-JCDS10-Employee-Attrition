@@ -1,0 +1,32 @@
+{% extends 'index.html' %} {% block content %}
+<center>
+    <div class="p1">
+        <b>Employee Attrition Prediction</b>
+    </div>
+    <br>
+    <div class="container">
+        <b>Environment Satisfaction: </b> {{EnvironmentSatisfaction}}<br>
+        <b>Job Satisfaction: </b> {{JobSatisfaction}}<br>
+        <b>Age: </b> {{Age}}<br>
+        <b>Business Travel: </b> {{BusinessTravel}}<br>
+        <b>Total Working Years: </b> {{TotalWorkingYears}}<br>
+        <b>Monthly Income: </b> {{MonthlyIncome}}<br>
+        <b>Years At Company: </b> {{YearsAtCompany}}<br>
+        <b>Years With Current Manager: </b> {{YearsWithCurrManager}}<br>
+        <b>Working Hours: </b> {{WorkingHours}}<br>
+        <b>Prediction: </b> {{pred}}<br>
+    </div>
+    <hr>
+    <a href="/pred_lr" target="_self">
+        <button style="background-color: rgb(255, 90, 95); color: whitesmoke" class="btn btn-light">
+            Predict Again
+        </button>
+    </a>
+    <a href="/" target="_self">
+        <button style="background-color: rgb(255, 90, 95); color: whitesmoke" class="btn btn-light">
+            Back to Home
+        </button>
+    </a>
+</center>
+
+{% endblock %}
